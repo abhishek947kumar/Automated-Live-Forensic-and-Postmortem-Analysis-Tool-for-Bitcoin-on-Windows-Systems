@@ -100,7 +100,7 @@ export default function RegistryViewer({ registryData }) {
           </div>
         ) : (
           <div style={{ padding: '1.5rem', textAlign: 'center', color: 'var(--text-dim)', fontSize: '0.88rem' }}>
-            No cryptocurrency executables detected in UserAssist registry hives. Run the IEEE benchmark to view sample ROT13 decrypted data.
+            No cryptocurrency executables detected in UserAssist registry hives. Run the benchmark scan to view sample ROT13 decrypted data.
           </div>
         )}
       </div>

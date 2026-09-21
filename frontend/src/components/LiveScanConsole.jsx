@@ -33,7 +33,7 @@ export default function LiveScanConsole({ logs, isActive }) {
         ))}
         {logs.length === 0 && (
           <div style={{ color: 'var(--text-dim)', fontStyle: 'italic', padding: '1rem', textAlign: 'center' }}>
-            Forensic engine initialized. Execute Live Triage or load the IEEE Benchmark case to observe acquisition telemetry.
+            Forensic engine initialized. Execute Live Triage or load the benchmark case to observe acquisition telemetry.
           </div>
         )}
         <div ref={consoleEndRef} />

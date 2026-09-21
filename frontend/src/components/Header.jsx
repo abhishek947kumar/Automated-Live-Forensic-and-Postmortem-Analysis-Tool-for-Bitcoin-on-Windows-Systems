@@ -50,7 +50,7 @@ export default function Header({
 
         {activeMode && (
           <div className="badge badge-cyan" style={{ fontSize: '0.75rem' }}>
-            {activeMode === 'IEEE_ACCESS_BENCHMARK_CASE' ? 'IEEE 2019 Benchmark Case' : 'Live Host Triage'}
+            {activeMode === 'SAMPLE_BENCHMARK_CASE' ? 'Simulated Benchmark Case' : 'Live Host Triage'}
           </div>
         )}
       </div>
@@ -60,10 +60,10 @@ export default function Header({
           className="btn-secondary" 
           onClick={onRunSampleScan} 
           disabled={loading}
-          title="Loads the IEEE Access 2019 research benchmark case: Operation Satoshi Shadow"
+          title="Loads the simulated benchmark case: Operation Satoshi Shadow"
         >
           <Layers size={16} color="var(--cyan)" />
-          {loading ? 'Processing...' : 'Load IEEE Benchmark'}
+          {loading ? 'Processing...' : 'Load Benchmark Case'}
         </button>
 
         <button 

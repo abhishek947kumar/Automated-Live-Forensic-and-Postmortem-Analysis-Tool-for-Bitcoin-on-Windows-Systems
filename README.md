@@ -4,15 +4,9 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?logo=react&logoColor=black)](https://react.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![IEEE Access](https://img.shields.io/badge/Research-IEEE%20Access%20(2019)-brightgreen.svg)](https://doi.org/10.1109/ACCESS.2019.2933100)
 [![ISO Standard](https://img.shields.io/badge/Compliance-ISO%2FIEC%2027037-orange.svg)](#chain-of-custody--isoiec-27037-compliance)
 
 An open-source, automated digital forensics and incident response (DFIR) platform designed to conduct both **live volatile memory (RAM)** and **persistent postmortem disk/registry** analysis of Bitcoin artifacts on Windows systems.
-
-Based directly on the landmark peer-reviewed research:
-> **Stephan Zollner, Kim-Kwang Raymond Choo, and Nhien-An Le-Khac (2019)**  
-> *"Automated Live Forensic and Postmortem Analysis Tool for Bitcoin on Windows"*  
-> **IEEE Access**, vol. 7, pp. 107693–107707. [DOI: 10.1109/ACCESS.2019.2933100](https://doi.org/10.1109/ACCESS.2019.2933100)
 
 ---
 
@@ -26,7 +20,6 @@ Based directly on the landmark peer-reviewed research:
 - [Running Automated Tests](#running-automated-tests)
 - [Repository Structure](#repository-structure)
 - [Chain of Custody & ISO/IEC 27037 Compliance](#chain-of-custody--isoiec-27037-compliance)
-- [Academic Citation](#academic-citation)
 - [License & Ethical Disclaimer](#license--ethical-disclaimer)
 
 ---
@@ -112,7 +105,7 @@ Based directly on the landmark peer-reviewed research:
   - 1-click generation of formal, printable PDF/HTML forensic reports containing an Executive Summary, Technical Inventory, Chain of Custody ledger, and Examiner Attestation block.
 
 - **Built-in Benchmark Case ("Operation Satoshi Shadow")**:
-  - Includes a synthetic reproduction of the IEEE Access 2019 test corpus, allowing complete evaluation without installing third-party wallets.
+  - Includes a synthetic forensic test corpus, allowing complete evaluation without installing third-party wallets.
 
 ---
 
@@ -206,7 +199,7 @@ All 9 automated tests run in under 2 seconds.
 │   ├── filesystem_scanner.py     # %APPDATA% scanner, Berkeley DB magic bytes, Prefetch
 │   ├── browser_analyzer.py       # Shadow copy SQLite history scanner (Chrome/Edge/Firefox)
 │   ├── chain_of_custody.py       # ISO/IEC 27037 evidence manager & hash calculator
-│   └── sample_corpus.py          # IEEE Access 2019 benchmark corpus generator
+│   └── sample_corpus.py          # Simulated forensic benchmark corpus generator
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
@@ -243,25 +236,6 @@ To ensure digital evidence is legally admissible in judicial proceedings, this p
 - Every acquired memory segment, recovered wallet file, and database export is immediately fingerprinted with **SHA-256** and **MD5** cryptographic hashes.
 - Evidence records store immutable acquisition timestamps, examiner identity, target host profiling, and provenance metadata.
 - Investigators can execute the **"Verify Hash"** routine to recalculate hashes from disk in real time to mathematically demonstrate zero evidence tampering.
-
----
-
-## 📚 Academic Citation
-
-If you use this tool in academic research, digital forensics investigations, or cybersecurity education, please cite the underlying IEEE Access research paper:
-
-```bibtex
-@article{zollner2019automated,
-  author    = {Zollner, Stephan and Choo, Kim-Kwang Raymond and Le-Khac, Nhien-An},
-  title     = {Automated Live Forensic and Postmortem Analysis Tool for Bitcoin on Windows},
-  journal   = {IEEE Access},
-  volume    = {7},
-  pages     = {107693--107707},
-  year      = {2019},
-  publisher = {IEEE},
-  doi       = {10.1109/ACCESS.2019.2933100}
-}
-```
 
 ---
 

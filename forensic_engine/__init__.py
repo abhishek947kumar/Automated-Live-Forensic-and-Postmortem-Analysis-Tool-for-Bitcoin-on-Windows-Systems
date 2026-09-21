@@ -1,6 +1,6 @@
 """
 Automated Live Forensic and Postmortem Analysis Tool for Bitcoin on Windows
-Based on research by Stephan Zollner, Kim-Kwang Raymond Choo, and Nhien-An Le-Khac (IEEE Access, 2019)
+Digital Forensics & Incident Response (DFIR) Framework
 """
 
 __version__ = "1.0.0"

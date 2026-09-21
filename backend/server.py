@@ -33,7 +33,7 @@ from forensic_engine.sample_corpus import create_sample_case_directory
 
 app = FastAPI(
     title="Bitcoin Live & Postmortem DFIR Engine API",
-    description="Automated Digital Forensics Tool based on IEEE Access (2019) research",
+    description="Automated Live & Postmortem Digital Forensics Tool for Bitcoin on Windows",
     version="1.0.0"
 )
 
@@ -60,7 +60,6 @@ def root():
     return {
         "status": "ONLINE",
         "system": "Automated Live & Postmortem Analysis Tool for Bitcoin",
-        "paper_ref": "Stephan Zollner, Kim-Kwang Raymond Choo, Nhien-An Le-Khac (IEEE Access, 2019)",
         "iso_standard": "ISO/IEC 27037 Digital Evidence Compliance"
     }
 
@@ -148,8 +147,8 @@ def run_live_triage():
     return latest_scan_results
 
 @app.post("/api/scan/sample")
-def run_sample_ieee_case():
-    """Loads and executes analysis on the IEEE Access 2019 experimental benchmark case."""
+def run_sample_benchmark_case():
+    """Loads and executes analysis on the simulated forensic benchmark case."""
     global latest_scan_results
     
     sample_dir = os.path.abspath(os.path.join(BASE_DIR, "forensic_data", "Operation_Satoshi_Shadow"))
@@ -186,7 +185,7 @@ def run_sample_ieee_case():
     browser_query = "SELECT url, title, visit_count, last_visit_time FROM urls ORDER BY last_visit_time DESC"
     browser_urls = safe_query_sqlite(case_files["browser_db"], browser_query, chrome_time_to_iso)
     
-    # 5. Synthesize Registry & UserAssist (Simulating IEEE findings of uninstalled software)
+    # 5. Synthesize Registry & UserAssist (Simulating persistent uninstalled remnants)
     simulated_registry = {
         "installed_software": [
             {
@@ -236,11 +235,11 @@ def run_sample_ieee_case():
                 "status": "REGISTERED (ORPHANED_REMNANT)"
             }
         ],
-        "system_status": "IEEE_BENCHMARK_CORPUS_ACTIVE"
+        "system_status": "BENCHMARK_CORPUS_ACTIVE"
     }
 
     latest_scan_results = {
-        "mode": "IEEE_ACCESS_BENCHMARK_CASE",
+        "mode": "SAMPLE_BENCHMARK_CASE",
         "case_id": "CASE-2026-BTC-0921",
         "case_name": "Operation Satoshi Shadow",
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -327,7 +326,7 @@ def generate_forensic_report(export_format: str = "json"):
         "case_id": custody_mgr.case_id,
         "examiner": custody_mgr.examiner_name,
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "academic_citation": "Zollner, S., Choo, K. K. R., & Le-Khac, N. A. (2019). Automated Live Forensic and Postmortem Analysis Tool for Bitcoin on Windows. IEEE Access, 7, 107693-107707.",
+        "standard_compliance": "ISO/IEC 27037 Digital Evidence Standards",
         "executive_summary": (
             "An automated live and postmortem forensic triage was conducted to detect digital artifacts "
             "associated with Bitcoin desktop software wallets and browser-based web wallets. "

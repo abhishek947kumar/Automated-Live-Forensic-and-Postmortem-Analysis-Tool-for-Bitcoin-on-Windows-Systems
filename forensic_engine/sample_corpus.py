@@ -1,6 +1,6 @@
 """
 Sample Forensic Corpus Generator ("Operation Satoshi Shadow")
-Recreates the exact experimental setup and findings from the IEEE Access 2019 paper:
+Generates a complete forensic benchmark environment:
 - Volatile memory dump with unencrypted BIP-39 mnemonic seed and WIF keys
 - Postmortem persistent uninstalled wallet remnants (Bitcoin Core Berkeley DB wallet.dat, Electrum JSON)
 - Windows Prefetch execution logs

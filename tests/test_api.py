@@ -32,7 +32,7 @@ class TestBitcoinForensicsAPI(unittest.TestCase):
         res = self.client.post("/api/scan/sample")
         self.assertEqual(res.status_code, 200)
         data = res.json()
-        self.assertEqual(data["mode"], "IEEE_ACCESS_BENCHMARK_CASE")
+        self.assertEqual(data["mode"], "SAMPLE_BENCHMARK_CASE")
         self.assertIn("volatile_memory", data)
         self.assertGreater(len(data["volatile_memory"]["seeds"]), 0)
         self.assertGreater(len(data["volatile_memory"]["private_keys"]), 0)
@@ -50,7 +50,7 @@ class TestBitcoinForensicsAPI(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         report = res.json()
         self.assertIn("report_id", report)
-        self.assertIn("academic_citation", report)
+        self.assertIn("standard_compliance", report)
 
 if __name__ == "__main__":
     unittest.main()

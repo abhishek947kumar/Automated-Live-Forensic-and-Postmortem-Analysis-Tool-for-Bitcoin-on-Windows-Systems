@@ -228,7 +228,7 @@ export default function LiveMemoryInspector({ volatileData, processes, onUploadM
 
             {seeds.length === 0 && privateKeys.length === 0 && credentials.length === 0 && (
               <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-dim)', fontSize: '0.88rem' }}>
-                No volatile secrets found in current scan. Upload a memory dump file or load the IEEE benchmark case.
+                No volatile secrets found in current scan. Upload a memory dump file or load the benchmark case.
               </div>
             )}
           </div>

@@ -20,7 +20,7 @@ export default function OverviewDashboard({ scanResults, onNavigateTab }) {
         <Database size={48} color="var(--cyan)" style={{ margin: '0 auto 1.25rem', opacity: 0.8 }} />
         <h2>Awaiting Digital Forensics Acquisition</h2>
         <p style={{ color: 'var(--text-muted)', maxWidth: '580px', margin: '0.75rem auto 1.75rem' }}>
-          Select <strong>"Execute Live Triage"</strong> to immediately extract volatile and persistent Bitcoin artifacts from this Windows host, or click <strong>"Load IEEE Benchmark"</strong> to evaluate the research test corpus.
+          Select <strong>"Execute Live Triage"</strong> to immediately extract volatile and persistent Bitcoin artifacts from this Windows host, or click <strong>"Load Benchmark Case"</strong> to evaluate the simulated test corpus.
         </p>
       </div>
     );
@@ -129,7 +129,7 @@ export default function OverviewDashboard({ scanResults, onNavigateTab }) {
               <Cpu size={18} color="var(--cyan)" />
               Target Wallet Artifact Footprint
             </h3>
-            <span className="badge badge-cyan">IEEE Access 2019 Scope</span>
+            <span className="badge badge-cyan">Target Ecosystem Scope</span>
           </div>
 
           <div className="table-wrapper">
@@ -197,17 +197,16 @@ export default function OverviewDashboard({ scanResults, onNavigateTab }) {
           </div>
         </div>
 
-        {/* Academic Context & DFIR Methodology */}
+        {/* DFIR Methodology Standards */}
         <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
               <BookOpen size={18} color="var(--indigo)" />
-              <h3 style={{ fontSize: '1.1rem' }}>Research Citation & Methodology</h3>
+              <h3 style={{ fontSize: '1.1rem' }}>DFIR Methodology & Triage Standards</h3>
             </div>
             
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Based on the published work in <em>IEEE Access (2019)</em> by <strong>Stephan Zollner, Kim-Kwang Raymond Choo, and Nhien-An Le-Khac</strong>:
-              <em> "Automated Live Forensic and Postmortem Analysis Tool for Bitcoin on Windows."</em>
+              Standardized automated digital forensics combining live volatile memory extraction with persistent postmortem disk and registry remnants analysis.
             </p>
 
             <div style={{ 

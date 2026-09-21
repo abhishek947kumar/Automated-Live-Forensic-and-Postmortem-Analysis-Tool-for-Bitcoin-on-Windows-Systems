@@ -46,7 +46,7 @@ export default function PostmortemExplorer({ filesystemData, prefetchData }) {
             </p>
           </div>
         </div>
-        <span className="badge badge-amber">Section 6 IEEE Finding</span>
+        <span className="badge badge-amber">Forensic Remnant Finding</span>
       </div>
 
       {/* Persistent Wallet Files Table */}

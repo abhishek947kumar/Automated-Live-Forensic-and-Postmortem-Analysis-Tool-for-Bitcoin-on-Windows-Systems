@@ -89,13 +89,8 @@ export default function ReportModal({ reportData, onClose }) {
               <div><strong>Lead Forensic Examiner:</strong> {reportData.examiner}</div>
               <div><strong>Target Operating System:</strong> {reportData.target_system}</div>
               <div><strong>Evidence Standard:</strong> ISO/IEC 27037 Digital Evidence</div>
-              <div><strong>Methodology Foundation:</strong> IEEE Access (2019) Benchmark</div>
+              <div><strong>Methodology:</strong> Automated Live & Postmortem Triage</div>
             </div>
-          </div>
-
-          {/* Academic Citation Reference */}
-          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)', borderLeft: '3px solid var(--indigo)', paddingLeft: '0.85rem' }}>
-            <strong>Academic Reference:</strong> {reportData.academic_citation}
           </div>
 
           {/* Executive Summary */}
