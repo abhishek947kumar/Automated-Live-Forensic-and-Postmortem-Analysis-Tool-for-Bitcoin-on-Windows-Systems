@@ -139,8 +139,8 @@ Based directly on the landmark peer-reviewed research:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin.git
-cd "Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin"
+git clone https://github.com/abhishek947kumar/Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems.git
+cd "Automated-Live-Forensic-and-Postmortem-Analysis-Tool-for-Bitcoin-on-Windows-Systems"
 ```
 
 ### 2. Install Python Backend Dependencies
